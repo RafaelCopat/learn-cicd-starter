@@ -21,6 +21,8 @@ jobs:
         run: ./scripts/buildprod.sh
 
   auth:
+    name: Auth
+    runs-on: ubuntu-latest
     steps:
       - id: 'auth'
         uses: 'google-github-actions/auth@v2'
