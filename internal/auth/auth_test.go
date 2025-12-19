@@ -11,11 +11,11 @@ func TestGetAPIKey_Success(t *testing.T) {
 	}
 
 	gotKey, err := GetAPIKey(headers)
-	if err != nil {
+	if err == nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
 
-	if gotKey != "12345" {
+	if gotKey == "12345" {
 		t.Fatalf("expected key %q, got %q", "12345", gotKey)
 	}
 }
